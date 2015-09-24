@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AnimationDemo2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cy" translatesAutoresizingMaskIntoConstraints="NO" id="DAU-Gl-s2t">
+                                <rect key="frame" x="153" y="178" width="112" height="136"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cy" translatesAutoresizingMaskIntoConstraints="NO" id="RfK-QO-viE">
+                                <rect key="frame" x="5" y="88" width="161" height="108"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cy" translatesAutoresizingMaskIntoConstraints="NO" id="VML-mG-CgR">
+                                <rect key="frame" x="20" y="370" width="112" height="128"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cy" translatesAutoresizingMaskIntoConstraints="NO" id="1D3-Zo-1Cb">
+                                <rect key="frame" x="188" y="28" width="112" height="136"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fj1" translatesAutoresizingMaskIntoConstraints="NO" id="Cz6-uc-VAF">
+                                <rect key="frame" x="122" y="239" width="76" height="89"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="76" id="RkZ-di-nTV"/>
+                                    <constraint firstAttribute="height" constant="89" id="t5u-NZ-58w"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="上海" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gVk-PL-7pq">
+                                <rect key="frame" x="26" y="270" width="46" height="27.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="北京" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hGY-rO-WIE">
+                                <rect key="frame" x="248" y="270.5" width="46" height="27.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.36470588240000001" green="0.76470588240000004" blue="0.91764705879999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="gVk-PL-7pq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="A6V-Cj-yCz"/>
+                            <constraint firstItem="gVk-PL-7pq" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="DQC-dc-3tN"/>
+                            <constraint firstItem="Cz6-uc-VAF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="K9p-rf-RdQ"/>
+                            <constraint firstItem="Cz6-uc-VAF" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="PRj-5t-Cxn"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hGY-rO-WIE" secondAttribute="trailing" constant="10" id="VBc-qV-d1o"/>
+                            <constraint firstItem="hGY-rO-WIE" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="dXa-JH-OlG"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="fj" destination="Cz6-uc-VAF" id="8q1-6l-3DN"/>
+                        <outlet property="yd1" destination="RfK-QO-viE" id="Lhr-Gu-vZ0"/>
+                        <outlet property="yd2" destination="1D3-Zo-1Cb" id="iFY-AK-ke4"/>
+                        <outlet property="yd3" destination="DAU-Gl-s2t" id="8uv-qE-lXo"/>
+                        <outlet property="yd4" destination="VML-mG-CgR" id="R3o-YH-Zav"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="142" y="291"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="cy" width="670" height="670"/>
+        <image name="fj1" width="671" height="561"/>
+    </resources>
+</document>
