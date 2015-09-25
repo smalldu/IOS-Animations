@@ -78,8 +78,6 @@ class ViewController: UIViewController {
                 self.fj.center = oriCenter
             })
 
-            
-            
             }) { _ in
             
         }
