@@ -111,6 +111,7 @@ class ViewController: UIViewController , UITextFieldDelegate {
     }
     
     @IBAction func login(sender:UIButton){
+        view.endEditing(true)
         let wobble = CAKeyframeAnimation(keyPath: "transform.rotation")
         wobble.duration = 0.25
         wobble.repeatCount = 4
