@@ -48,8 +48,6 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     }
     
     @IBAction func toggleMenu(sender: UIButton){
-     
-       
         isMenuOpen = !isMenuOpen
         for constraint in titleLabel.superview!.constraints{
             if constraint.secondItem as? NSObject == titleLabel &&

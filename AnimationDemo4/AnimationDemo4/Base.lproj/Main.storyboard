@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AnimationDemo4" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FdO-tX-HCG">
+                                <rect key="frame" x="101" y="170" width="118" height="37.5"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="User Login">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="24" name="Papyrus"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="input your username" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Kzn-FK-Ffz">
+                                <rect key="frame" x="60" y="232" width="200" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="Onn-ed-p0l"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="input your password" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ne2-lT-1cE">
+                                <rect key="frame" x="60" y="286" width="200" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="HY2-zT-Gao"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GHq-zE-DNE">
+                                <rect key="frame" x="114" y="340" width="92" height="38"/>
+                                <color key="backgroundColor" red="0.86889879740333442" green="0.55720634931643709" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="92" id="Ju2-F7-YH7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="21"/>
+                                <state key="normal" title="Log in">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="login:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NZR-ns-AgL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.36470588240000001" green="0.76470588240000004" blue="0.91764705879999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="ne2-lT-1cE" firstAttribute="top" secondItem="Kzn-FK-Ffz" secondAttribute="bottom" constant="24" id="79g-pW-AlC"/>
+                            <constraint firstItem="FdO-tX-HCG" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="150" id="BT5-Hz-R4c"/>
+                            <constraint firstItem="GHq-zE-DNE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="COd-0n-nZb"/>
+                            <constraint firstItem="GHq-zE-DNE" firstAttribute="top" secondItem="ne2-lT-1cE" secondAttribute="bottom" constant="24" id="F2v-fv-zwR"/>
+                            <constraint firstItem="Kzn-FK-Ffz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ILg-i7-1eW"/>
+                            <constraint firstItem="FdO-tX-HCG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Nmz-1a-NRx"/>
+                            <constraint firstItem="Kzn-FK-Ffz" firstAttribute="top" secondItem="FdO-tX-HCG" secondAttribute="bottom" constant="24.5" id="lUy-4u-LnH"/>
+                            <constraint firstItem="ne2-lT-1cE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vTd-3q-9PS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="login" destination="GHq-zE-DNE" id="uzA-cD-QGI"/>
+                        <outlet property="password" destination="ne2-lT-1cE" id="FiP-I8-QsV"/>
+                        <outlet property="titleLable" destination="FdO-tX-HCG" id="Fbz-rn-g93"/>
+                        <outlet property="userName" destination="Kzn-FK-Ffz" id="kYp-g3-DKS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="142" y="291"/>
+        </scene>
+    </scenes>
+</document>
