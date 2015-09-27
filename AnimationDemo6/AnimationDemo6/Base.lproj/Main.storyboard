@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AnimationDemo6" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mx5-gx-DKp" customClass="AnimatedLabel" customModule="AnimationDemo6" customModuleProvider="target">
+                                <rect key="frame" x="40" y="448" width="240" height="55"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="FDP-gN-DAP"/>
+                                    <constraint firstAttribute="height" constant="55" id="nIS-4R-Ok2"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="text" value="滑动来解锁哦"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jmm-2n-7Iv">
+                                <rect key="frame" x="0.0" y="90" width="320" height="74.5"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="09:29">
+                                        <attributes>
+                                            <color key="NSColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="63" name="HelveticaNeue-ThinItalic"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jmm-2n-7Iv" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="70" id="EEC-nY-mPu"/>
+                            <constraint firstItem="jmm-2n-7Iv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="WFA-Im-yjw"/>
+                            <constraint firstItem="Mx5-gx-DKp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bFc-dB-LSH"/>
+                            <constraint firstAttribute="trailing" secondItem="jmm-2n-7Iv" secondAttribute="trailing" id="hlX-Bd-TTz"/>
+                            <constraint firstItem="jmm-2n-7Iv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="m3c-1m-xJc"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Mx5-gx-DKp" secondAttribute="bottom" constant="65" id="vrS-Ff-ZF5"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="constraintA" destination="EEC-nY-mPu" id="wEF-4Z-VNh"/>
+                        <outlet property="constraintB" destination="vrS-Ff-ZF5" id="CrH-Ai-gl6"/>
+                        <outlet property="slideView" destination="Mx5-gx-DKp" id="8R1-lD-nY2"/>
+                        <outlet property="timeLabel" destination="jmm-2n-7Iv" id="09i-nA-Vmy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="142" y="291"/>
+        </scene>
+    </scenes>
+</document>
