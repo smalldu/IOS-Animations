@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="6Xl-CT-YuQ">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <scenes>
+        <!--练习下拉刷新-->
+        <scene sceneID="Piw-3B-I5i">
+            <objects>
+                <viewController id="z37-uL-rDW" customClass="ViewController" customModule="AnimationDemo7" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ng4-bu-yVT"/>
+                        <viewControllerLayoutGuide type="bottom" id="La4-EG-SGB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wg4-u9-A2k">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gSQ-8L-upP">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="separatorColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="J4U-DN-YyM">
+                                        <rect key="frame" x="0.0" y="92" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="J4U-DN-YyM" id="Iwu-x7-4sq">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="z37-uL-rDW" id="EeW-BN-6jM"/>
+                                    <outlet property="delegate" destination="z37-uL-rDW" id="Nc7-OD-xsR"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gSQ-8L-upP" firstAttribute="top" secondItem="wg4-u9-A2k" secondAttribute="top" id="2AQ-un-jSx"/>
+                            <constraint firstAttribute="trailing" secondItem="gSQ-8L-upP" secondAttribute="trailing" id="4Uz-RF-mA8"/>
+                            <constraint firstAttribute="bottom" secondItem="gSQ-8L-upP" secondAttribute="bottom" id="7br-if-lS2"/>
+                            <constraint firstItem="gSQ-8L-upP" firstAttribute="leading" secondItem="wg4-u9-A2k" secondAttribute="leading" id="lw9-9x-AKo"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="练习下拉刷新" id="uDX-kB-gLu"/>
+                    <connections>
+                        <outlet property="tbView" destination="gSQ-8L-upP" id="qdr-Sx-qOF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gul-wQ-cOo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="778" y="103"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Hid-Ub-Gnz">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6Xl-CT-YuQ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="M8c-5H-3nh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="z37-uL-rDW" kind="relationship" relationship="rootViewController" id="0bv-Rx-zni"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XUB-Ds-3gy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="246" y="103"/>
+        </scene>
+    </scenes>
+</document>
