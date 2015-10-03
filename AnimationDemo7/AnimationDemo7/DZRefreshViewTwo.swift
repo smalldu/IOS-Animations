@@ -18,7 +18,6 @@ class DZRefreshViewTwo: UIView,UIScrollViewDelegate {
     var viewHeight = 100.0
     var isRefreshing = false
     var delegate:RefreshDelegate?
-    var originTop:CGFloat = 0.0
     var isAnimating = false
     
     var shapeLayer = CAShapeLayer()
@@ -49,7 +48,6 @@ class DZRefreshViewTwo: UIView,UIScrollViewDelegate {
     
     func scrollViewWillEndDragging(scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
         if !isRefreshing && progress >= 1{
-            self.originTop = self.scrollView.contentInset.top
             //执行刷新任务
             delegate?.doRefresh(self)
             beginRefresh()
@@ -115,9 +113,9 @@ class DZRefreshViewTwo: UIView,UIScrollViewDelegate {
         shapeLayer.lineWidth = 0
         shapeLayer.lineDashPattern = []
         shapeLayer.fillColor = UIColor.grayColor().CGColor
-        let  y = originTop == 0.0 ? frame.size.height - offY + 1 :  frame.size.height - offY + 1 - (scrollView.contentInset.top - originTop)
+        let  y = frame.size.height - offY + 1
         let width = frame.size.width * progress * 0.8 > 15 ? 15:frame.size.width * progress * 0.8
-            shapeLayer.path = UIBezierPath(ovalInRect: CGRectMake((frame.size.width/2) - 7.5 , y , width , frame.size.height * progress * 0.8)).CGPath
+        shapeLayer.path = UIBezierPath(ovalInRect: CGRectMake((frame.size.width/2) - 7.5 , y , width , frame.size.height * progress * 0.8)).CGPath
         
         }
     }
