@@ -17,7 +17,6 @@ class DZRefreshView: UIView,UIScrollViewDelegate {
     var delegate: RefreshViewDelegate?
     var isRefreshing = false
     var progress: CGFloat = 0.0
-    //var beginOffSetY:CGFloat!
     
     var shapeLayer:CAShapeLayer!
     let airPlaneLayer:CALayer = CALayer()
@@ -34,7 +33,7 @@ class DZRefreshView: UIView,UIScrollViewDelegate {
         imgView.clipsToBounds = true
         addSubview(imgView)
         scrollView?.delegate = self
-        //beginOffSetY = scrollView!.contentOffset.y
+        
         //添加圆形layer 
         shapeLayer = CAShapeLayer()
         shapeLayer.strokeColor = UIColor.whiteColor().CGColor
@@ -111,15 +110,13 @@ class DZRefreshView: UIView,UIScrollViewDelegate {
     
     //滚动的时候
     func scrollViewDidScroll(scrollView: UIScrollView) {
-       print(scrollView.contentInset.top)
+       //print(scrollView.contentInset.top)
        let offSetY = CGFloat(max(-(scrollView.contentOffset.y + scrollView.contentInset.top),0))
        self.progress = min(offSetY / self.frame.size.height, 1.0)
        redrawFromProgress(progress)
         
     }
     
-    
-
     func scrollViewWillEndDragging(scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
         if !isRefreshing && self.progress >= 1.0 {
             delegate?.refreshViewDidRefresh(self) //执行刷新操作

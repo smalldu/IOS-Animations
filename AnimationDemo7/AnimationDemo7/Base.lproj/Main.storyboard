@@ -44,7 +44,13 @@
                             <constraint firstItem="gSQ-8L-upP" firstAttribute="leading" secondItem="wg4-u9-A2k" secondAttribute="leading" id="lw9-9x-AKo"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="练习下拉刷新" id="uDX-kB-gLu"/>
+                    <navigationItem key="navigationItem" title="练习下拉刷新" id="uDX-kB-gLu">
+                        <barButtonItem key="rightBarButtonItem" systemItem="play" id="11b-Zd-aeV">
+                            <connections>
+                                <segue destination="CGx-ej-YQC" kind="push" id="I2V-Js-DVU"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tbView" destination="gSQ-8L-upP" id="qdr-Sx-qOF"/>
                     </connections>
@@ -52,6 +58,54 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gul-wQ-cOo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="778" y="103"/>
+        </scene>
+        <!--第二个下拉刷新-->
+        <scene sceneID="xZP-SP-fyC">
+            <objects>
+                <viewController id="CGx-ej-YQC" customClass="SecondViewController" customModule="AnimationDemo7" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1RH-HS-Jp6"/>
+                        <viewControllerLayoutGuide type="bottom" id="9uQ-MS-JHZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pcg-JR-h4l">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Bwg-Iv-avk">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="FJM-tL-iP7">
+                                        <rect key="frame" x="0.0" y="92" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FJM-tL-iP7" id="r1I-UN-6n0">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="CGx-ej-YQC" id="aBN-QF-5PX"/>
+                                    <outlet property="delegate" destination="CGx-ej-YQC" id="FWB-v7-1Q9"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Bwg-Iv-avk" firstAttribute="leading" secondItem="pcg-JR-h4l" secondAttribute="leading" id="0Pt-n3-Qiy"/>
+                            <constraint firstAttribute="trailing" secondItem="Bwg-Iv-avk" secondAttribute="trailing" id="88u-N4-GjL"/>
+                            <constraint firstItem="9uQ-MS-JHZ" firstAttribute="top" secondItem="Bwg-Iv-avk" secondAttribute="bottom" id="H9o-Vr-Mxq"/>
+                            <constraint firstItem="Bwg-Iv-avk" firstAttribute="top" secondItem="pcg-JR-h4l" secondAttribute="top" id="fDe-D6-2sT"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="第二个下拉刷新" id="5o9-3A-rmg"/>
+                    <connections>
+                        <outlet property="tableView" destination="Bwg-Iv-avk" id="Bu3-RZ-Pq8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ydE-LK-wHO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1168" y="114"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Hid-Ub-Gnz">

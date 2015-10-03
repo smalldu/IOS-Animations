@@ -15,6 +15,8 @@
 		208439531BB795A1002801BD /* AnimationDemo7Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208439521BB795A1002801BD /* AnimationDemo7Tests.swift */; };
 		2084395E1BB795A1002801BD /* AnimationDemo7UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2084395D1BB795A1002801BD /* AnimationDemo7UITests.swift */; };
 		2084396C1BB795C1002801BD /* DZRefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2084396B1BB795C1002801BD /* DZRefreshView.swift */; settings = {ASSET_TAGS = (); }; };
+		209700971BBF58E300D94236 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209700961BBF58E300D94236 /* SecondViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		209700991BBF5A8300D94236 /* DZRefreshViewTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209700981BBF5A8300D94236 /* DZRefreshViewTwo.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		2084395D1BB795A1002801BD /* AnimationDemo7UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationDemo7UITests.swift; sourceTree = "<group>"; };
 		2084395F1BB795A1002801BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2084396B1BB795C1002801BD /* DZRefreshView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DZRefreshView.swift; sourceTree = "<group>"; };
+		209700961BBF58E300D94236 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		209700981BBF5A8300D94236 /* DZRefreshViewTwo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DZRefreshViewTwo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,8 @@
 				208439461BB795A1002801BD /* LaunchScreen.storyboard */,
 				208439491BB795A1002801BD /* Info.plist */,
 				2084396B1BB795C1002801BD /* DZRefreshView.swift */,
+				209700961BBF58E300D94236 /* SecondViewController.swift */,
+				209700981BBF5A8300D94236 /* DZRefreshViewTwo.swift */,
 			);
 			path = AnimationDemo7;
 			sourceTree = "<group>";
@@ -261,8 +267,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				209700971BBF58E300D94236 /* SecondViewController.swift in Sources */,
 				208439401BB795A1002801BD /* ViewController.swift in Sources */,
 				2084393E1BB795A1002801BD /* AppDelegate.swift in Sources */,
+				209700991BBF5A8300D94236 /* DZRefreshViewTwo.swift in Sources */,
 				2084396C1BB795C1002801BD /* DZRefreshView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -488,6 +496,7 @@
 				208439641BB795A1002801BD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		208439651BB795A1002801BD /* Build configuration list for PBXNativeTarget "AnimationDemo7Tests" */ = {
 			isa = XCConfigurationList;
@@ -496,6 +505,7 @@
 				208439671BB795A1002801BD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		208439681BB795A1002801BD /* Build configuration list for PBXNativeTarget "AnimationDemo7UITests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +514,7 @@
 				2084396A1BB795A1002801BD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
