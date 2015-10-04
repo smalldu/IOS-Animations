@@ -1,0 +1,507 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2088B7881BC14A5B005F210D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2088B7871BC14A5B005F210D /* AppDelegate.swift */; };
+		2088B78A1BC14A5B005F210D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2088B7891BC14A5B005F210D /* ViewController.swift */; };
+		2088B78D1BC14A5B005F210D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2088B78B1BC14A5B005F210D /* Main.storyboard */; };
+		2088B78F1BC14A5B005F210D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2088B78E1BC14A5B005F210D /* Assets.xcassets */; };
+		2088B7921BC14A5B005F210D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2088B7901BC14A5B005F210D /* LaunchScreen.storyboard */; };
+		2088B79D1BC14A5B005F210D /* _DTransformDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2088B79C1BC14A5B005F210D /* _DTransformDemoTests.swift */; };
+		2088B7A81BC14A5B005F210D /* _DTransformDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2088B7A71BC14A5B005F210D /* _DTransformDemoUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2088B7991BC14A5B005F210D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2088B77C1BC14A5B005F210D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2088B7831BC14A5B005F210D;
+			remoteInfo = 3DTransformDemo;
+		};
+		2088B7A41BC14A5B005F210D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2088B77C1BC14A5B005F210D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2088B7831BC14A5B005F210D;
+			remoteInfo = 3DTransformDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2088B7841BC14A5B005F210D /* 3DTransformDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 3DTransformDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2088B7871BC14A5B005F210D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2088B7891BC14A5B005F210D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2088B78C1BC14A5B005F210D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2088B78E1BC14A5B005F210D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2088B7911BC14A5B005F210D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2088B7931BC14A5B005F210D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2088B7981BC14A5B005F210D /* 3DTransformDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = 3DTransformDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2088B79C1BC14A5B005F210D /* _DTransformDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _DTransformDemoTests.swift; sourceTree = "<group>"; };
+		2088B79E1BC14A5B005F210D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2088B7A31BC14A5B005F210D /* 3DTransformDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = 3DTransformDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2088B7A71BC14A5B005F210D /* _DTransformDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _DTransformDemoUITests.swift; sourceTree = "<group>"; };
+		2088B7A91BC14A5B005F210D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2088B7811BC14A5B005F210D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2088B7951BC14A5B005F210D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2088B7A01BC14A5B005F210D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2088B77B1BC14A5B005F210D = {
+			isa = PBXGroup;
+			children = (
+				2088B7861BC14A5B005F210D /* 3DTransformDemo */,
+				2088B79B1BC14A5B005F210D /* 3DTransformDemoTests */,
+				2088B7A61BC14A5B005F210D /* 3DTransformDemoUITests */,
+				2088B7851BC14A5B005F210D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2088B7851BC14A5B005F210D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2088B7841BC14A5B005F210D /* 3DTransformDemo.app */,
+				2088B7981BC14A5B005F210D /* 3DTransformDemoTests.xctest */,
+				2088B7A31BC14A5B005F210D /* 3DTransformDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2088B7861BC14A5B005F210D /* 3DTransformDemo */ = {
+			isa = PBXGroup;
+			children = (
+				2088B7871BC14A5B005F210D /* AppDelegate.swift */,
+				2088B7891BC14A5B005F210D /* ViewController.swift */,
+				2088B78B1BC14A5B005F210D /* Main.storyboard */,
+				2088B78E1BC14A5B005F210D /* Assets.xcassets */,
+				2088B7901BC14A5B005F210D /* LaunchScreen.storyboard */,
+				2088B7931BC14A5B005F210D /* Info.plist */,
+			);
+			path = 3DTransformDemo;
+			sourceTree = "<group>";
+		};
+		2088B79B1BC14A5B005F210D /* 3DTransformDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				2088B79C1BC14A5B005F210D /* _DTransformDemoTests.swift */,
+				2088B79E1BC14A5B005F210D /* Info.plist */,
+			);
+			path = 3DTransformDemoTests;
+			sourceTree = "<group>";
+		};
+		2088B7A61BC14A5B005F210D /* 3DTransformDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2088B7A71BC14A5B005F210D /* _DTransformDemoUITests.swift */,
+				2088B7A91BC14A5B005F210D /* Info.plist */,
+			);
+			path = 3DTransformDemoUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2088B7831BC14A5B005F210D /* 3DTransformDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2088B7AC1BC14A5B005F210D /* Build configuration list for PBXNativeTarget "3DTransformDemo" */;
+			buildPhases = (
+				2088B7801BC14A5B005F210D /* Sources */,
+				2088B7811BC14A5B005F210D /* Frameworks */,
+				2088B7821BC14A5B005F210D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = 3DTransformDemo;
+			productName = 3DTransformDemo;
+			productReference = 2088B7841BC14A5B005F210D /* 3DTransformDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2088B7971BC14A5B005F210D /* 3DTransformDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2088B7AF1BC14A5B005F210D /* Build configuration list for PBXNativeTarget "3DTransformDemoTests" */;
+			buildPhases = (
+				2088B7941BC14A5B005F210D /* Sources */,
+				2088B7951BC14A5B005F210D /* Frameworks */,
+				2088B7961BC14A5B005F210D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2088B79A1BC14A5B005F210D /* PBXTargetDependency */,
+			);
+			name = 3DTransformDemoTests;
+			productName = 3DTransformDemoTests;
+			productReference = 2088B7981BC14A5B005F210D /* 3DTransformDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2088B7A21BC14A5B005F210D /* 3DTransformDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2088B7B21BC14A5B005F210D /* Build configuration list for PBXNativeTarget "3DTransformDemoUITests" */;
+			buildPhases = (
+				2088B79F1BC14A5B005F210D /* Sources */,
+				2088B7A01BC14A5B005F210D /* Frameworks */,
+				2088B7A11BC14A5B005F210D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2088B7A51BC14A5B005F210D /* PBXTargetDependency */,
+			);
+			name = 3DTransformDemoUITests;
+			productName = 3DTransformDemoUITests;
+			productReference = 2088B7A31BC14A5B005F210D /* 3DTransformDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2088B77C1BC14A5B005F210D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = duzhe;
+				TargetAttributes = {
+					2088B7831BC14A5B005F210D = {
+						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = ZNRTL68XQ3;
+					};
+					2088B7971BC14A5B005F210D = {
+						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = ZNRTL68XQ3;
+						TestTargetID = 2088B7831BC14A5B005F210D;
+					};
+					2088B7A21BC14A5B005F210D = {
+						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = ZNRTL68XQ3;
+						TestTargetID = 2088B7831BC14A5B005F210D;
+					};
+				};
+			};
+			buildConfigurationList = 2088B77F1BC14A5B005F210D /* Build configuration list for PBXProject "3DTransformDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2088B77B1BC14A5B005F210D;
+			productRefGroup = 2088B7851BC14A5B005F210D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2088B7831BC14A5B005F210D /* 3DTransformDemo */,
+				2088B7971BC14A5B005F210D /* 3DTransformDemoTests */,
+				2088B7A21BC14A5B005F210D /* 3DTransformDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2088B7821BC14A5B005F210D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2088B7921BC14A5B005F210D /* LaunchScreen.storyboard in Resources */,
+				2088B78F1BC14A5B005F210D /* Assets.xcassets in Resources */,
+				2088B78D1BC14A5B005F210D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2088B7961BC14A5B005F210D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2088B7A11BC14A5B005F210D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2088B7801BC14A5B005F210D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2088B78A1BC14A5B005F210D /* ViewController.swift in Sources */,
+				2088B7881BC14A5B005F210D /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2088B7941BC14A5B005F210D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2088B79D1BC14A5B005F210D /* _DTransformDemoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2088B79F1BC14A5B005F210D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2088B7A81BC14A5B005F210D /* _DTransformDemoUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2088B79A1BC14A5B005F210D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2088B7831BC14A5B005F210D /* 3DTransformDemo */;
+			targetProxy = 2088B7991BC14A5B005F210D /* PBXContainerItemProxy */;
+		};
+		2088B7A51BC14A5B005F210D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2088B7831BC14A5B005F210D /* 3DTransformDemo */;
+			targetProxy = 2088B7A41BC14A5B005F210D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2088B78B1BC14A5B005F210D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2088B78C1BC14A5B005F210D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2088B7901BC14A5B005F210D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2088B7911BC14A5B005F210D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2088B7AA1BC14A5B005F210D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2088B7AB1BC14A5B005F210D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2088B7AD1BC14A5B005F210D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = 3DTransformDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "dz.org.-DTransformDemo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		2088B7AE1BC14A5B005F210D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = 3DTransformDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "dz.org.-DTransformDemo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		2088B7B01BC14A5B005F210D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = 3DTransformDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "dz.org.-DTransformDemoTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/3DTransformDemo.app/3DTransformDemo";
+			};
+			name = Debug;
+		};
+		2088B7B11BC14A5B005F210D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = 3DTransformDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "dz.org.-DTransformDemoTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/3DTransformDemo.app/3DTransformDemo";
+			};
+			name = Release;
+		};
+		2088B7B31BC14A5B005F210D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = 3DTransformDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "dz.org.-DTransformDemoUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = 3DTransformDemo;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		2088B7B41BC14A5B005F210D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = 3DTransformDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "dz.org.-DTransformDemoUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = 3DTransformDemo;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2088B77F1BC14A5B005F210D /* Build configuration list for PBXProject "3DTransformDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2088B7AA1BC14A5B005F210D /* Debug */,
+				2088B7AB1BC14A5B005F210D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2088B7AC1BC14A5B005F210D /* Build configuration list for PBXNativeTarget "3DTransformDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2088B7AD1BC14A5B005F210D /* Debug */,
+				2088B7AE1BC14A5B005F210D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2088B7AF1BC14A5B005F210D /* Build configuration list for PBXNativeTarget "3DTransformDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2088B7B01BC14A5B005F210D /* Debug */,
+				2088B7B11BC14A5B005F210D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2088B7B21BC14A5B005F210D /* Build configuration list for PBXNativeTarget "3DTransformDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2088B7B31BC14A5B005F210D /* Debug */,
+				2088B7B41BC14A5B005F210D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2088B77C1BC14A5B005F210D /* Project object */;
+}
