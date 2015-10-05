@@ -24,7 +24,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         var trans = CATransform3DIdentity
-        trans.m34 = -1 / 1000
+        trans.m34 = -1 / 500
    
         
         var trans2 = CATransform3DTranslate(trans, 0, 0, 50)
