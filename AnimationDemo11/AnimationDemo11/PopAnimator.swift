@@ -13,6 +13,7 @@ class PopAnimator: NSObject,UIViewControllerAnimatedTransitioning {
     let duration = 1.0
     var presenting = true  //是否正在presenting
     var originFrame = CGRect.zero
+    var hideImage:(()->())?
     
     //动画持续时间
     func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {
@@ -59,7 +60,10 @@ class PopAnimator: NSObject,UIViewControllerAnimatedTransitioning {
                 y: CGRectGetMidY(finalFrame))
                 
             }) { (_) -> Void in
-                    
+                
+                if !self.presenting{
+                    self.hidIt()
+                }
                 transitionContext.completeTransition(true)
         }
        
@@ -72,6 +76,10 @@ class PopAnimator: NSObject,UIViewControllerAnimatedTransitioning {
 //            }, completion: { _ in
 //                transitionContext.completeTransition(true)
 //        })
+    }
+    
+    func hidIt(){
+        hideImage?()
     }
     
 }

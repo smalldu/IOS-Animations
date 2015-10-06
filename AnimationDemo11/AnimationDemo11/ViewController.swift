@@ -123,7 +123,10 @@ extension ViewController:UIViewControllerTransitioningDelegate{
     
     //使用默认的动画
     func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        selectedImage!.hidden = false
+        
+        transition.hideImage={
+            self.selectedImage!.hidden = false
+        }
         transition.presenting = false
         return transition
     }
