@@ -66,8 +66,7 @@ class PopAnimator: NSObject,UIViewControllerAnimatedTransitioning {
                 }
                 transitionContext.completeTransition(true)
         }
-       
-//        
+     
 //        containerView!.addSubview(toView!)
 //        toView!.alpha = 0.0
 //        UIView.animateWithDuration(duration,

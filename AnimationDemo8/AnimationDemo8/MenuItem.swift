@@ -40,6 +40,7 @@ class MenuItem {
         items.append(MenuItem(symbol: "✈︎", color: menuColors[5], title: "Travel"))
         items.append(MenuItem(symbol: "🃖", color: menuColors[6], title: "Etc."))
         
+        
         return items
     }
     
