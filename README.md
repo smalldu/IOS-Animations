@@ -40,5 +40,3 @@
 
 ![这里写图片描述](http://img.blog.csdn.net/20151004194437853)
 
-
-下载地址: https://github.com/smalldu/IOS-Animations
