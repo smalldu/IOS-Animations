@@ -193,15 +193,18 @@
 					20061DC51BB2E58F00DF173F = {
 						CreatedOnToolsVersion = 7.0;
 						DevelopmentTeam = ZNRTL68XQ3;
+						LastSwiftMigration = 0830;
 					};
 					20061DD91BB2E58F00DF173F = {
 						CreatedOnToolsVersion = 7.0;
 						DevelopmentTeam = ZNRTL68XQ3;
+						LastSwiftMigration = 0830;
 						TestTargetID = 20061DC51BB2E58F00DF173F;
 					};
 					20061DE41BB2E58F00DF173F = {
 						CreatedOnToolsVersion = 7.0;
 						DevelopmentTeam = ZNRTL68XQ3;
+						LastSwiftMigration = 0830;
 						TestTargetID = 20061DC51BB2E58F00DF173F;
 					};
 				};
@@ -403,6 +406,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dz.org.AnimationDemo1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -414,6 +418,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dz.org.AnimationDemo1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -425,6 +430,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dz.org.AnimationDemo1Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AnimationDemo1.app/AnimationDemo1";
 			};
 			name = Debug;
@@ -437,6 +443,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dz.org.AnimationDemo1Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AnimationDemo1.app/AnimationDemo1";
 			};
 			name = Release;
@@ -448,6 +455,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dz.org.AnimationDemo1UITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = AnimationDemo1;
 				USES_XCTRUNNER = YES;
 			};
@@ -460,6 +468,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dz.org.AnimationDemo1UITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = AnimationDemo1;
 				USES_XCTRUNNER = YES;
 			};
@@ -484,6 +493,7 @@
 				20061DF01BB2E58F00DF173F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		20061DF11BB2E58F00DF173F /* Build configuration list for PBXNativeTarget "AnimationDemo1Tests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +502,7 @@
 				20061DF31BB2E58F00DF173F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		20061DF41BB2E58F00DF173F /* Build configuration list for PBXNativeTarget "AnimationDemo1UITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +511,7 @@
 				20061DF61BB2E58F00DF173F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
