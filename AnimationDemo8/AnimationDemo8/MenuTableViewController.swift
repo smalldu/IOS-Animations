@@ -16,7 +16,7 @@ class MenuTableViewController: UITableViewController {
         super.viewDidLoad()
         tableView.rowHeight = (tableView.bounds.size.height - 44 - 20) / 7
         navigationController?.navigationBar.clipsToBounds = true //不显示导航栏下面的小阴影
-        (navigationController?.parentViewController as! ContainerViewController).menuItem = MenuItem.sharedItems[0]
+        (navigationController?.parent as! ContainerViewController).menuItem = MenuItem.sharedItems[0]
 
     }
 
@@ -26,24 +26,24 @@ class MenuTableViewController: UITableViewController {
     }
 
     // MARK: - Table view data source
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return MenuItem.sharedItems.count
     }
 
 
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         let menuItem = MenuItem.sharedItems[indexPath.row]
-        cell.textLabel?.backgroundColor = UIColor.clearColor()
-        cell.textLabel?.textColor = UIColor.whiteColor()
+        cell.textLabel?.backgroundColor = UIColor.clear
+        cell.textLabel?.textColor = UIColor.white
         cell.textLabel?.font = UIFont(name: "Helvetica", size: 36.0)
-        cell.textLabel?.textAlignment = .Center
+        cell.textLabel?.textAlignment = .center
         cell.textLabel?.text = menuItem.symbol
         
         cell.contentView.backgroundColor = menuItem.color
@@ -52,9 +52,9 @@ class MenuTableViewController: UITableViewController {
     }
 
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
-        (navigationController?.parentViewController as! ContainerViewController).menuItem = MenuItem.sharedItems[indexPath.row]
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        (navigationController?.parent as! ContainerViewController).menuItem = MenuItem.sharedItems[indexPath.row]
     }
     
 }

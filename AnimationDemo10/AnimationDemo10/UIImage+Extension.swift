@@ -15,7 +15,7 @@ extension UIImage {
     /// - parameter width: 指定宽度
     ///
     /// - returns: UIImage，如果本身比指定的宽度小，直接返回
-    func scaleImageToWidth(width: CGFloat) -> UIImage {
+    func scaleImageToWidth(_ width: CGFloat) -> UIImage {
         
         // 1. 判断宽度，如果小于指定宽度直接返回当前图像
         if size.width < width {
@@ -31,7 +31,7 @@ extension UIImage {
         UIGraphicsBeginImageContext(s)
         
         // 在制定区域中缩放绘制完整图像
-        drawInRect(CGRect(origin: CGPointZero, size: s))
+        draw(in: CGRect(origin: CGPoint.zero, size: s))
 
         // 4. 获取绘制结果
         let result = UIGraphicsGetImageFromCurrentImageContext()
@@ -40,6 +40,6 @@ extension UIImage {
         UIGraphicsEndImageContext()
 
         // 6. 返回结果
-        return result
+        return result!
     }
 }

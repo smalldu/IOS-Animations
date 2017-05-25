@@ -17,7 +17,7 @@ class AnimatedLabel: UIView {
         //配置gradientLayer
         gradientLayer.startPoint = CGPoint(x: 0.0, y: 0.5)
         gradientLayer.endPoint = CGPoint(x: 1.0, y: 0.5)
-        let colors = [UIColor.purpleColor().CGColor , UIColor.greenColor().CGColor , UIColor.blackColor().CGColor,UIColor.redColor().CGColor,UIColor.whiteColor().CGColor]
+        let colors = [UIColor.purple.cgColor , UIColor.green.cgColor , UIColor.black.cgColor,UIColor.red.cgColor,UIColor.white.cgColor]
         gradientLayer.colors = colors
         
         let locations = [
@@ -25,7 +25,7 @@ class AnimatedLabel: UIView {
             0.5,
             0.75
         ]
-        gradientLayer.locations = locations
+        gradientLayer.locations = locations as [NSNumber]
         
         return gradientLayer
         }()
@@ -35,20 +35,20 @@ class AnimatedLabel: UIView {
                 setNeedsDisplay()
                 UIGraphicsBeginImageContextWithOptions(frame.size, false, 0)
                 //let context = UIGraphicsGetCurrentContext()
-                text.drawInRect(bounds, withAttributes: textAttr)
+                text.draw(in: bounds, withAttributes: textAttr)
                 let image = UIGraphicsGetImageFromCurrentImageContext()
                 UIGraphicsEndImageContext()
                 let maskLayer = CALayer()
-                maskLayer.backgroundColor = UIColor.clearColor().CGColor
-                maskLayer.frame = CGRectOffset(bounds, bounds.size.width, 0)
-                maskLayer.contents = image.CGImage
+                maskLayer.backgroundColor = UIColor.clear.cgColor
+                maskLayer.frame = bounds.offsetBy(dx: bounds.size.width, dy: 0)
+                maskLayer.contents = image?.cgImage
                 gradientLayer.mask = maskLayer
             }
     }
     
     let textAttr:[String:AnyObject]? = {
         let style = NSMutableParagraphStyle()
-        style.alignment = .Center
+        style.alignment = .center
         return [
             NSFontAttributeName:UIFont(name: "HelveticaNeue-Thin",
             size: 28.0)!,
@@ -56,7 +56,7 @@ class AnimatedLabel: UIView {
         ]
     }()
     
-    override func drawRect(rect: CGRect) {
+    override func draw(_ rect: CGRect) {
 //        layer.borderColor = UIColor.whiteColor().CGColor
 //        layer.borderWidth = 1.0
 //        layer.backgroundColor = UIColor(white: 1, alpha: 0.1).CGColor
@@ -97,7 +97,7 @@ class AnimatedLabel: UIView {
         gradientAnimate.duration = 3.0
         gradientAnimate.repeatCount = Float.infinity
         
-        gradientLayer.addAnimation(gradientAnimate, forKey: nil)
+        gradientLayer.add(gradientAnimate, forKey: nil)
         
     }
     

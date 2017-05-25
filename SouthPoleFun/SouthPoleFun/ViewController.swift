@@ -12,7 +12,7 @@ class ViewController: UIViewController {
   var isLookingRight: Bool = true {
     didSet {
       let xScale: CGFloat = isLookingRight ? 1 : -1
-      penguin.transform = CGAffineTransformMakeScale(xScale, 1)
+      penguin.transform = CGAffineTransform(scaleX: xScale, y: 1)
       slideButton.transform = penguin.transform
     }
   }
@@ -64,27 +64,27 @@ class ViewController: UIViewController {
 
   }
   
-  @IBAction func actionLeft(sender: AnyObject) {
+  @IBAction func actionLeft(_ sender: AnyObject) {
     isLookingRight = false
     penguin.startAnimating()
     
-    UIView.animateWithDuration(animationDuration, delay: 0.0, options: .CurveEaseOut, animations: {
+    UIView.animate(withDuration: animationDuration, delay: 0.0, options: .curveEaseOut, animations: {
       self.penguin.center.x -= self.walkSize.width
       }, completion: nil)
 
   }
   
-  @IBAction func actionRight(sender: AnyObject) {
+  @IBAction func actionRight(_ sender: AnyObject) {
     isLookingRight = true
     
     penguin.startAnimating()
-    UIView.animateWithDuration(animationDuration, delay: 0.0, options: .CurveEaseOut, animations: {
+    UIView.animate(withDuration: animationDuration, delay: 0.0, options: .curveEaseOut, animations: {
       self.penguin.center.x += self.walkSize.width
       }, completion: nil)
 
   }
   
-  @IBAction func actionSlide(sender: AnyObject) {
+  @IBAction func actionSlide(_ sender: AnyObject) {
     loadSlideAnimation()
     
     penguin.frame = CGRect(
@@ -95,7 +95,7 @@ class ViewController: UIViewController {
 
     penguin.startAnimating()
 
-    UIView.animateWithDuration(animationDuration - 0.02, delay: 0.0, options: .CurveEaseOut, animations: {
+    UIView.animate(withDuration: animationDuration - 0.02, delay: 0.0, options: .curveEaseOut, animations: {
       self.penguin.center.x += self.isLookingRight ?
         self.slideSize.width : -self.slideSize.width
       }, completion: {_ in

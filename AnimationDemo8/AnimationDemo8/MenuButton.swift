@@ -14,10 +14,10 @@ class MenuButton: UIView {
     var tapHandler:(()->())?
 
     override func didMoveToSuperview() {
-        frame = CGRectMake(0, 0, 20, 20)
+        frame = CGRect(x: 0, y: 0, width: 20, height: 20)
         
         imageView = UIImageView(image: UIImage(named: "menu"))
-        imageView.userInteractionEnabled = true
+        imageView.isUserInteractionEnabled = true
         imageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(MenuButton.didTap)))
         addSubview(imageView)
     }
@@ -27,7 +27,7 @@ class MenuButton: UIView {
     }
  
     
-    func rotate(fraction:CGFloat){
-        imageView?.transform = CGAffineTransformMakeRotation(fraction*CGFloat(M_PI_2))
+    func rotate(_ fraction:CGFloat){
+        imageView?.transform = CGAffineTransform(rotationAngle: fraction*CGFloat(M_PI_2))
     }
 }

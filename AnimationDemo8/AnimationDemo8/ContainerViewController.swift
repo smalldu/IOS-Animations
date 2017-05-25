@@ -18,8 +18,8 @@ class ContainerViewController: UIViewController,UIScrollViewDelegate {
     var isFirst = true
     var isScroll = true
     
-    private var menuViewController:MenuTableViewController?
-    private var detailViewController:DetailViewController?
+    fileprivate var menuViewController:MenuTableViewController?
+    fileprivate var detailViewController:DetailViewController?
     var menuItem:MenuItem?{
         didSet{
             if let detail = detailViewController{
@@ -30,19 +30,19 @@ class ContainerViewController: UIViewController,UIScrollViewDelegate {
     }
     
     
-    func hideShowMenu(show:Bool,animate:Bool){
-        let menuOff = CGRectGetWidth(menuContainerView.bounds)
-        scrollView.setContentOffset(show ? CGPointZero:CGPointMake(menuOff, 0), animated: animate)
+    func hideShowMenu(_ show:Bool,animate:Bool){
+        let menuOff = menuContainerView.bounds.width
+        scrollView.setContentOffset(show ? CGPoint.zero:CGPoint(x: menuOff, y: 0), animated: animate)
     }
     func toggleMenu(){
        
-        let menuOff = CGRectGetWidth(menuContainerView.bounds)
-        scrollView.setContentOffset(scrollView.contentOffset.x != 0 ? CGPointZero:CGPointMake(menuOff, 0), animated: true)
+        let menuOff = menuContainerView.bounds.width
+        scrollView.setContentOffset(scrollView.contentOffset.x != 0 ? CGPoint.zero:CGPoint(x: menuOff, y: 0), animated: true)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        menuContainerView.layer.anchorPoint = CGPointMake(1.0, 0.5)
+        menuContainerView.layer.anchorPoint = CGPoint(x: 1.0, y: 0.5)
         //消除锯齿
 //        menuViewController?.tableView.layer.shouldRasterize = false
 //        menuViewController?.tableView.layer.rasterizationScale =
@@ -56,18 +56,18 @@ class ContainerViewController: UIViewController,UIScrollViewDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "DetailViewSegue"{
-            let navigation = segue.destinationViewController as! UINavigationController
+            let navigation = segue.destination as! UINavigationController
             detailViewController = navigation.topViewController as? DetailViewController
         }else if segue.identifier == "MenuViewController"{
-            let navigation = segue.destinationViewController as! UINavigationController
+            let navigation = segue.destination as! UINavigationController
             menuViewController = navigation.topViewController as? MenuTableViewController
         }
         
     }
     
-    func scrollViewDidScroll(scrollView: UIScrollView) {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
         
         let multipier = 1/menuContainerView.bounds.width
         progress = 1-((scrollView.contentOffset.x) * multipier)
@@ -79,12 +79,12 @@ class ContainerViewController: UIViewController,UIScrollViewDelegate {
         }
         menuContainerView.layer.transform = menuTransformForPercent(progress!)
         menuContainerView.alpha = progress!
-        scrollView.pagingEnabled = scrollView.contentOffset.x < (scrollView.contentSize.width - CGRectGetWidth(scrollView.frame))
+        scrollView.isPagingEnabled = scrollView.contentOffset.x < (scrollView.contentSize.width - scrollView.frame.width)
         isFirst = false
     }
     
     
-    func menuTransformForPercent(percent: CGFloat) -> CATransform3D {
+    func menuTransformForPercent(_ percent: CGFloat) -> CATransform3D {
         var identity = CATransform3DIdentity
         identity.m34 = -1.0/1000   //1 / [camera distance]
         let remainingPercent = 1.0 - percent

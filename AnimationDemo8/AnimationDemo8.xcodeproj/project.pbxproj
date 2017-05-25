@@ -14,11 +14,11 @@
 		2088B70E1BC00279005F210D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2088B70C1BC00279005F210D /* LaunchScreen.storyboard */; };
 		2088B7191BC0027A005F210D /* AnimationDemo8Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2088B7181BC0027A005F210D /* AnimationDemo8Tests.swift */; };
 		2088B7241BC0027A005F210D /* AnimationDemo8UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2088B7231BC0027A005F210D /* AnimationDemo8UITests.swift */; };
-		2088B7331BC00E56005F210D /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2088B7321BC00E56005F210D /* ContainerViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		2088B7351BC018F7005F210D /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2088B7341BC018F7005F210D /* MenuTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		2088B7371BC019DB005F210D /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2088B7361BC019DB005F210D /* MenuItem.swift */; settings = {ASSET_TAGS = (); }; };
-		2088B7391BC024E3005F210D /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2088B7381BC024E3005F210D /* DetailViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		2088B73B1BC02FE2005F210D /* MenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2088B73A1BC02FE2005F210D /* MenuButton.swift */; settings = {ASSET_TAGS = (); }; };
+		2088B7331BC00E56005F210D /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2088B7321BC00E56005F210D /* ContainerViewController.swift */; };
+		2088B7351BC018F7005F210D /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2088B7341BC018F7005F210D /* MenuTableViewController.swift */; };
+		2088B7371BC019DB005F210D /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2088B7361BC019DB005F210D /* MenuItem.swift */; };
+		2088B7391BC024E3005F210D /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2088B7381BC024E3005F210D /* DetailViewController.swift */; };
+		2088B73B1BC02FE2005F210D /* MenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2088B73A1BC02FE2005F210D /* MenuButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -216,15 +216,18 @@
 					2088B6FF1BC00279005F210D = {
 						CreatedOnToolsVersion = 7.0;
 						DevelopmentTeam = ZNRTL68XQ3;
+						LastSwiftMigration = 0830;
 					};
 					2088B7131BC0027A005F210D = {
 						CreatedOnToolsVersion = 7.0;
 						DevelopmentTeam = ZNRTL68XQ3;
+						LastSwiftMigration = 0830;
 						TestTargetID = 2088B6FF1BC00279005F210D;
 					};
 					2088B71E1BC0027A005F210D = {
 						CreatedOnToolsVersion = 7.0;
 						DevelopmentTeam = ZNRTL68XQ3;
+						LastSwiftMigration = 0830;
 						TestTargetID = 2088B6FF1BC00279005F210D;
 					};
 				};
@@ -431,6 +434,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dz.org.AnimationDemo8;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -442,6 +446,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dz.org.AnimationDemo8;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -453,6 +458,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dz.org.AnimationDemo8Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AnimationDemo8.app/AnimationDemo8";
 			};
 			name = Debug;
@@ -465,6 +471,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dz.org.AnimationDemo8Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AnimationDemo8.app/AnimationDemo8";
 			};
 			name = Release;
@@ -476,6 +483,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dz.org.AnimationDemo8UITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = AnimationDemo8;
 				USES_XCTRUNNER = YES;
 			};
@@ -488,6 +496,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dz.org.AnimationDemo8UITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = AnimationDemo8;
 				USES_XCTRUNNER = YES;
 			};
@@ -512,6 +521,7 @@
 				2088B72A1BC0027A005F210D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2088B72B1BC0027A005F210D /* Build configuration list for PBXNativeTarget "AnimationDemo8Tests" */ = {
 			isa = XCConfigurationList;
@@ -520,6 +530,7 @@
 				2088B72D1BC0027A005F210D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2088B72E1BC0027A005F210D /* Build configuration list for PBXNativeTarget "AnimationDemo8UITests" */ = {
 			isa = XCConfigurationList;
@@ -528,6 +539,7 @@
 				2088B7301BC0027A005F210D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -22,9 +22,9 @@ class AvatarView: UIView {
     
     let label: UILabel = {
         let label = UILabel()
-        label.font = UIFont(name: "ArialRoundedMTBold", size: 18.0)
-        label.textAlignment = .Center
-        label.textColor = UIColor.blackColor()
+        label.font = UIFont.systemFont(ofSize: 18)
+        label.textAlignment = .center
+        label.textColor = UIColor.black
         return label
         }()
     
@@ -32,7 +32,7 @@ class AvatarView: UIView {
     @IBInspectable
     var image: UIImage! {
         didSet {
-            photoLayer.contents = image.CGImage
+          photoLayer.contents = image.cgImage
         }
     }
     
@@ -44,7 +44,7 @@ class AvatarView: UIView {
     }
     
     override func layoutSubviews() {
-        self.backgroundColor = UIColor.clearColor()
+        self.backgroundColor = UIColor.clear
         //Size the avatar image to fit
         photoLayer.frame = CGRect(
             x: 0,
@@ -53,10 +53,10 @@ class AvatarView: UIView {
             height: 91)
         
         //Draw the circle
-        circleLayer.path = UIBezierPath(ovalInRect: bounds).CGPath
-        circleLayer.strokeColor = UIColor.whiteColor().CGColor
+        circleLayer.path = UIBezierPath(ovalIn: bounds).cgPath
+        circleLayer.strokeColor = UIColor.white.cgColor
         circleLayer.lineWidth = lineWidth
-        circleLayer.fillColor = UIColor.clearColor().CGColor
+        circleLayer.fillColor = UIColor.clear.cgColor
         
         //Size the layer
         maskLayer.path = circleLayer.path
@@ -77,7 +77,7 @@ class AvatarView: UIView {
     func reInit(){
         isSuqare = false
         shouldTransitionToFinishedState = false
-        self.backgroundColor = UIColor.clearColor()
+        self.backgroundColor = UIColor.clear
         //Size the avatar image to fit
         photoLayer.frame = CGRect(
             x: 0,
@@ -86,10 +86,10 @@ class AvatarView: UIView {
             height: 91)
         
         //Draw the circle
-        circleLayer.path = UIBezierPath(ovalInRect: bounds).CGPath
-        circleLayer.strokeColor = UIColor.whiteColor().CGColor
+        circleLayer.path = UIBezierPath(ovalIn: bounds).cgPath
+        circleLayer.strokeColor = UIColor.white.cgColor
         circleLayer.lineWidth = lineWidth
-        circleLayer.fillColor = UIColor.clearColor().CGColor
+        circleLayer.fillColor = UIColor.clear.cgColor
         
         //Size the layer
         maskLayer.path = circleLayer.path
@@ -101,10 +101,10 @@ class AvatarView: UIView {
     }
     
     //两个参数 一个是移动的地点  一个是变形方式
-    func bounceOffPoint(bouncePoint: CGPoint, morphSize: CGSize) {
+    func bounceOffPoint(_ bouncePoint: CGPoint, morphSize: CGSize) {
         
         let originalCenter = self.center
-        UIView.animateWithDuration(animationDuration, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: UIViewAnimationOptions.AllowAnimatedContent, animations: {
+        UIView.animate(withDuration: animationDuration, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: UIViewAnimationOptions.allowAnimatedContent, animations: {
             
                 self.center = bouncePoint
             
@@ -115,11 +115,11 @@ class AvatarView: UIView {
                     let animate = CABasicAnimation(keyPath: "path")
                     animate.duration = 0.25
                     animate.fromValue = self.circleLayer.path
-                    animate.toValue = squareBezier.CGPath
-                    self.circleLayer.addAnimation(animate, forKey: nil)
-                    self.circleLayer.path = squareBezier.CGPath
-                    self.maskLayer.addAnimation(animate, forKey: nil)
-                    self.maskLayer.path = squareBezier.CGPath
+                    animate.toValue = squareBezier.cgPath
+                    self.circleLayer.add(animate, forKey: nil)
+                    self.circleLayer.path = squareBezier.cgPath
+                    self.maskLayer.add(animate, forKey: nil)
+                    self.maskLayer.path = squareBezier.cgPath
                     
                 }
                 if !self.isSuqare {
@@ -135,10 +135,10 @@ class AvatarView: UIView {
         
         let morphAnimation = CABasicAnimation(keyPath: "path")
         morphAnimation.duration = animationDuration
-        morphAnimation.toValue = UIBezierPath(ovalInRect: morphedFrame).CGPath
+        morphAnimation.toValue = UIBezierPath(ovalIn: morphedFrame).cgPath
         morphAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
-        circleLayer.addAnimation(morphAnimation, forKey: nil)
-        maskLayer.addAnimation(morphAnimation, forKey: nil)
+        circleLayer.add(morphAnimation, forKey: nil)
+        maskLayer.add(morphAnimation, forKey: nil)
     }
     
     

@@ -17,8 +17,8 @@ class DetailViewController: UIViewController {
         didSet{
             view.backgroundColor = menuItem?.color
             symbol.text = menuItem?.symbol
-            UIView.animateWithDuration(0.4, animations: {
-                self.menuView.transform = CGAffineTransformIdentity
+            UIView.animate(withDuration: 0.4, animations: {
+                self.menuView.transform = CGAffineTransform.identity
             })
         }
     }
@@ -26,21 +26,21 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         menuView.tapHandler = {
-        let containerVc = self.navigationController?.parentViewController as! ContainerViewController
+        let containerVc = self.navigationController?.parent as! ContainerViewController
             containerVc.isScroll = false
             if containerVc.scrollView.contentOffset.x == 0 {
-                UIView.animateWithDuration(0.5, animations: {
-                    self.menuView.transform = CGAffineTransformIdentity
-                    }){ _ in
+                UIView.animate(withDuration: 0.5, animations: {
+                    self.menuView.transform = CGAffineTransform.identity
+                    }, completion: { _ in
                         containerVc.isScroll=true
-                }
+                })
             }else{
-                UIView.animateWithDuration(0.5, animations: {
-                    self.menuView.imageView.transform = CGAffineTransformMakeRotation(CGFloat(M_PI_2))
-                    }){_ in
+                UIView.animate(withDuration: 0.5, animations: {
+                    self.menuView.imageView.transform = CGAffineTransform(rotationAngle: CGFloat(M_PI_2))
+                    }, completion: {_ in
                 
                         containerVc.isScroll=true
-                }
+                })
             }
             
             containerVc.toggleMenu()

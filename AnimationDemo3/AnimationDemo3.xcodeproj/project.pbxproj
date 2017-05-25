@@ -14,7 +14,7 @@
 		20061E481BB43DB600DF173F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20061E461BB43DB600DF173F /* LaunchScreen.storyboard */; };
 		20061E531BB43DB600DF173F /* AnimationDemo3Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20061E521BB43DB600DF173F /* AnimationDemo3Tests.swift */; };
 		20061E5E1BB43DB600DF173F /* AnimationDemo3UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20061E5D1BB43DB600DF173F /* AnimationDemo3UITests.swift */; };
-		20061E6C1BB5742F00DF173F /* IConListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20061E6B1BB5742F00DF173F /* IConListView.swift */; settings = {ASSET_TAGS = (); }; };
+		20061E6C1BB5742F00DF173F /* IConListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20061E6B1BB5742F00DF173F /* IConListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -196,15 +196,18 @@
 					20061E391BB43DB600DF173F = {
 						CreatedOnToolsVersion = 7.0;
 						DevelopmentTeam = ZNRTL68XQ3;
+						LastSwiftMigration = 0830;
 					};
 					20061E4D1BB43DB600DF173F = {
 						CreatedOnToolsVersion = 7.0;
 						DevelopmentTeam = ZNRTL68XQ3;
+						LastSwiftMigration = 0830;
 						TestTargetID = 20061E391BB43DB600DF173F;
 					};
 					20061E581BB43DB600DF173F = {
 						CreatedOnToolsVersion = 7.0;
 						DevelopmentTeam = ZNRTL68XQ3;
+						LastSwiftMigration = 0830;
 						TestTargetID = 20061E391BB43DB600DF173F;
 					};
 				};
@@ -407,6 +410,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dz.org.AnimationDemo3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -418,6 +422,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dz.org.AnimationDemo3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -429,6 +434,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dz.org.AnimationDemo3Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AnimationDemo3.app/AnimationDemo3";
 			};
 			name = Debug;
@@ -441,6 +447,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dz.org.AnimationDemo3Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AnimationDemo3.app/AnimationDemo3";
 			};
 			name = Release;
@@ -452,6 +459,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dz.org.AnimationDemo3UITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = AnimationDemo3;
 				USES_XCTRUNNER = YES;
 			};
@@ -464,6 +472,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dz.org.AnimationDemo3UITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = AnimationDemo3;
 				USES_XCTRUNNER = YES;
 			};
@@ -488,6 +497,7 @@
 				20061E641BB43DB600DF173F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		20061E651BB43DB600DF173F /* Build configuration list for PBXNativeTarget "AnimationDemo3Tests" */ = {
 			isa = XCConfigurationList;
@@ -496,6 +506,7 @@
 				20061E671BB43DB600DF173F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		20061E681BB43DB600DF173F /* Build configuration list for PBXNativeTarget "AnimationDemo3UITests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +515,7 @@
 				20061E6A1BB43DB600DF173F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

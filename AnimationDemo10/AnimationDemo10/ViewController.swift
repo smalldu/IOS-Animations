@@ -23,11 +23,11 @@ class ViewController: UIViewController {
         //kCAEmitterLayerLine
         //kCAEmitterLayerRectangle
         
-        emitter.emitterPosition = CGPointMake(rect.width/2, rect.height/2)
+        emitter.emitterPosition = CGPoint(x: rect.width/2, y: rect.height/2)
         emitter.emitterSize = rect.size
         
         let emitterCell = CAEmitterCell()
-        emitterCell.contents = UIImage(named: "xh")!.scaleImageToWidth(30).CGImage
+        emitterCell.contents = UIImage(named: "xh")!.scaleImageToWidth(30).cgImage
         emitterCell.birthRate = 120  //每秒产生120个粒子
         emitterCell.lifetime = 3    //存活1秒
         emitterCell.lifetimeRange = 3.0

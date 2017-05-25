@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     @IBOutlet var vs: UILabel!
     @IBOutlet var searchAgain: UIButton!
     
-    var opponents = ["a2","a3","a4","a5","a6"]
+    var opponents = ["tx1","tx2","tx3","tx1","tx2"]
     var names = ["小明","大狗","小王","八神","李四"]
     
     var original1:CGPoint!
@@ -35,7 +35,7 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         searchOpponent()
         
     }
@@ -78,13 +78,13 @@ class ViewController: UIViewController {
     
     func completed(){
         status.text = "准备战斗吧"
-        UIView.animateWithDuration(0.2) {
+        UIView.animate(withDuration: 0.2, animations: {
             self.vs.alpha = 0.0
             self.searchAgain.alpha = 1.0
-        }
+        }) 
     }
     
-    @IBAction func reFind(sender:UIButton){
+    @IBAction func reFind(_ sender:UIButton){
         myAvatar.reInit()
         opponentAvatar.reInit()
         opponentAvatar.image = UIImage(named: "empty")
@@ -95,19 +95,19 @@ class ViewController: UIViewController {
          
 //        self.myAvatar.center = original1;//CGPoint(x: 228.0, y: 125.5)
 //        self.opponentAvatar.center = CGPoint(x: 228.0, y: 125.5)
-        UIView.animateWithDuration(0.2) {
+        UIView.animate(withDuration: 0.2, animations: {
             self.vs.alpha = 1.0
             self.searchAgain.alpha = 0.0
         
-        }
+        }) 
         status.text = "正在寻找对手。。。"
         delay(1, complete: searchOpponent)
        // searchOpponent()
     }
     
-    func delay(seconds:Double,complete:()->()){
-        let popTime = dispatch_time(DISPATCH_TIME_NOW, Int64( Double(NSEC_PER_SEC) * seconds ))
-        dispatch_after(popTime, dispatch_get_main_queue()) { () -> Void in
+    func delay(_ seconds:Double,complete:@escaping ()->()){
+        let popTime = DispatchTime.now() + Double(Int64( Double(NSEC_PER_SEC) * seconds )) / Double(NSEC_PER_SEC)
+        DispatchQueue.main.asyncAfter(deadline: popTime) { () -> Void in
             complete()
         }
     }

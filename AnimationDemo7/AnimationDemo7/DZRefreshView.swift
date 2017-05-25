@@ -8,7 +8,7 @@
 
 import UIKit
 protocol RefreshViewDelegate {
-    func refreshViewDidRefresh(refreshView: DZRefreshView)
+    func refreshViewDidRefresh(_ refreshView: DZRefreshView)
 }
 
 class DZRefreshView: UIView,UIScrollViewDelegate {
@@ -27,27 +27,27 @@ class DZRefreshView: UIView,UIScrollViewDelegate {
         self.scrollView = inScrollView
         
         //添加背景图
-        let imgView = UIImageView(image: UIImage(named: "refresh-view-bg.png"))
+        let imgView = UIImageView(image: UIImage(named: "bg"))
         imgView.frame = bounds
-        imgView.contentMode = .ScaleAspectFill
+        imgView.contentMode = .scaleAspectFill
         imgView.clipsToBounds = true
         addSubview(imgView)
         scrollView?.delegate = self
         
         //添加圆形layer 
         shapeLayer = CAShapeLayer()
-        shapeLayer.strokeColor = UIColor.whiteColor().CGColor
-        shapeLayer.fillColor = UIColor.clearColor().CGColor
+        shapeLayer.strokeColor = UIColor.white.cgColor
+        shapeLayer.fillColor = UIColor.clear.cgColor
         shapeLayer.lineWidth = 4
         shapeLayer.lineDashPattern = [2]
         let refreshRadius = frame.size.height/2 * 0.8
-        shapeLayer.path = UIBezierPath(ovalInRect: CGRectMake(frame.size.width/2 - refreshRadius, frame.size.height/2 - refreshRadius , 2 * refreshRadius, 2 * refreshRadius)).CGPath
+        shapeLayer.path = UIBezierPath(ovalIn: CGRect(x: frame.size.width/2 - refreshRadius, y: frame.size.height/2 - refreshRadius , width: 2 * refreshRadius, height: 2 * refreshRadius)).cgPath
         self.layer.addSublayer(shapeLayer)
         
         //飞机层
-        let airImage = UIImage(named: "airplane")
-        airPlaneLayer.contents = airImage?.CGImage
-        airPlaneLayer.bounds = CGRectMake(0, 0, airImage!.size.width , airImage!.size.height)
+        let airImage = UIImage(named: "air")
+        airPlaneLayer.contents = airImage?.cgImage
+        airPlaneLayer.bounds = CGRect(x: 0, y: 0, width: 40 , height: 40)
         airPlaneLayer.position = CGPoint(x: frame.size.width/2 + refreshRadius , y: frame.size.height / 2)
         airPlaneLayer.opacity = 0.0
         
@@ -60,11 +60,11 @@ class DZRefreshView: UIView,UIScrollViewDelegate {
 
     func beginRefreshing(){
         isRefreshing = true
-        UIView.animateWithDuration(0.3) {
+        UIView.animate(withDuration: 0.3, animations: {
             var newInsets = self.scrollView!.contentInset
             newInsets.top += self.frame.size.height
             self.scrollView!.contentInset = newInsets
-        }
+        }) 
         
         let strokeStartAnimation = CABasicAnimation(keyPath: "strokeBegin")
         strokeStartAnimation.fromValue = -0.5
@@ -78,7 +78,7 @@ class DZRefreshView: UIView,UIScrollViewDelegate {
         strokeAnimationGroup.duration = 1.5
         strokeAnimationGroup.repeatDuration = 5
         strokeAnimationGroup.animations = [strokeStartAnimation,strokeEndAnimation]
-        shapeLayer.addAnimation(strokeAnimationGroup, forKey: nil)
+        shapeLayer.add(strokeAnimationGroup, forKey: nil)
         
         //飞机的动画
         let flightAnimation = CAKeyframeAnimation(keyPath: "position")
@@ -93,13 +93,13 @@ class DZRefreshView: UIView,UIScrollViewDelegate {
         flightAnimationGroup.duration = 1.5
         flightAnimationGroup.repeatDuration = 5.0
         flightAnimationGroup.animations = [flightAnimation,rotateAnimation]
-        airPlaneLayer.addAnimation(flightAnimationGroup, forKey: nil)
+        airPlaneLayer.add(flightAnimationGroup, forKey: nil)
         
     }
     
     func endRefreshing() {
         isRefreshing = false
-        UIView.animateWithDuration(0.3, delay:0.0, options: .CurveEaseOut ,animations: {
+        UIView.animate(withDuration: 0.3, delay:0.0, options: .curveEaseOut ,animations: {
             var newInsets = self.scrollView!.contentInset
             newInsets.top -= self.frame.size.height
             self.scrollView!.contentInset = newInsets
@@ -109,7 +109,7 @@ class DZRefreshView: UIView,UIScrollViewDelegate {
     }
     
     //滚动的时候
-    func scrollViewDidScroll(scrollView: UIScrollView) {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
        //print(scrollView.contentInset.top)
        let offSetY = CGFloat(max(-(scrollView.contentOffset.y + scrollView.contentInset.top),0))
        self.progress = min(offSetY / self.frame.size.height, 1.0)
@@ -117,7 +117,7 @@ class DZRefreshView: UIView,UIScrollViewDelegate {
         
     }
     
-    func scrollViewWillEndDragging(scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
         if !isRefreshing && self.progress >= 1.0 {
             delegate?.refreshViewDidRefresh(self) //执行刷新操作
             beginRefreshing()
@@ -126,7 +126,7 @@ class DZRefreshView: UIView,UIScrollViewDelegate {
          //shapeLayer.strokeEnd = 1
     }
     
-    func redrawFromProgress(progress: CGFloat) {
+    func redrawFromProgress(_ progress: CGFloat) {
         shapeLayer.strokeEnd = progress
         airPlaneLayer.opacity = Float(progress)
     }
